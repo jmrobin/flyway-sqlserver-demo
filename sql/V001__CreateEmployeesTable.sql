@@ -1,0 +1,8 @@
+-- CreateEmployeesTable.sql
+CREATE TABLE Employees
+(
+Id INT NOT NULL PRIMARY KEY IDENTITY (1,1),
+FirstName VARCHAR(40) NOT NULL,
+LastName VARCHAR(40) NOT NULL
+);
+GO
