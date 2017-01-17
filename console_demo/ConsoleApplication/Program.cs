@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApplication
 {
@@ -10,10 +6,16 @@ namespace ConsoleApplication
     {
         static void Main ( string[] args )
         {
+            Flyway.CheckDatabase ( );
+            PrintEmployees ( );
+        }
+
+        private static void PrintEmployees ( )
+        {
             var employees = new PayrollEntities ( ).Employees;
-            foreach( Employee employee in employees )
+            foreach (Employee employee in employees)
             {
-                Console.WriteLine ( employee.Id + " " + employee.LastName );
+                Console.WriteLine ( employee.Id + "/" + employee.LastName );
             }
         }
     }

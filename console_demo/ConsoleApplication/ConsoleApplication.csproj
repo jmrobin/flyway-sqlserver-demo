@@ -60,6 +60,7 @@
     <Compile Include="EmployeePosition.cs">
       <DependentUpon>PayrollModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Flyway.cs" />
     <Compile Include="PayrollModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
