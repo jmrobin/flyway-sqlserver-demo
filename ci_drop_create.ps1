@@ -12,7 +12,7 @@ if(Test-Path $databasePath)
 }
 Invoke-Sqlcmd "CREATE DATABASE [$databaseName]"
 
-flyway -configFile="conf\ci.conf" migrate
+.\flyway -configFile="conf\ci.conf" migrate
 if ($LastExitCode -ne 0) 
 {
     throw "flyway migrate failed with exit code $LastExitCode."
